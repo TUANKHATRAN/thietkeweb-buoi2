@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div.container{
+    background-color: rgba(0, 255, 55, 0.61);
+    margin-left: 0px;
+    
+}
+form#frmLogin{
+    background-color: aqua;
+}
+label{
+    color: blue;
+    font-weight: bolder;
+    border-style: inset;
+  display: inline-block;
+  width: 130px;
+input 
+  width: 200px;
+}
+
+h3{
+    border-style: dotted;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: larger;
+}
+
+div.form-group{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+div.form-control{
+    display: block;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  width: 200px;
+}
+
+
