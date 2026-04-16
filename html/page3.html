@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel = "stylesheet" href = "../css/style3.css">
+    <meta charset="UTF-8">
+    <title>Đăng ký hệ thống</title>
+</head>
+<body>
+
+<div class="container">
+    <h2>Đăng ký hệ thống</h2>
+
+    <form>
+        <label>Họ tên:</label>
+        <input type="text" required>
+
+        <label>MSSV:</label>
+        <input type="text" required>
+
+        <label>Lớp:</label>
+        <select required>
+            <option value="">-- Chọn lớp --</option>
+            <option>DA24TTA</option>
+            <option>DA24TTB</option>
+            <option>DA24TTC</option>
+            <option>DA24TTC</option>
+
+        </select>
+
+        <label>Giới tính:</label>
+        <div class="group">
+            <input type="radio" name="gender"> Nam
+            <input type="radio" name="gender"> Nữ
+            <input type="radio" name="gender"> Khác
+        </div>
+
+        <label>Ngày sinh:</label>
+        <input type="date" required>
+
+        
+        <label>Số điện thoại:</label>
+        <input type="tel" required>
+
+        <label>Địa chỉ:</label>
+        <input type="text" required>
+
+        <label>Email:</label>
+        <input type="email" required>
+
+        <label>Điểm mạnh (CNTT):</label>
+        <div class="group">
+            <input type="checkbox"> Lập trình Web<br>
+            <input type="checkbox"> Java / C++<br>
+            <input type="checkbox"> Python<br>
+            <input type="checkbox"> SQL / Database<br>
+            <input type="checkbox"> UI/UX<br>
+            <input type="checkbox"> AI / Machine Learning
+        </div>
+
+        <div class="btn-group">
+            <button type="submit">Đăng ký ngay</button>
+            <button type="reset">Nhập lại</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
