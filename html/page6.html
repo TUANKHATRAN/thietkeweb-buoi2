@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style6.css">
+</head>
+
+<body>
+  <div class="product-item">
+    <div class="product-image">
+    
+    </div>
+    
+  </div>
+
+  <script>
+   
+    const newDiv = document.querySelector(".product-item"); // Sử dụng div hiện có thay vì tạo mới
+    const productImage = document.createElement("div");
+    productImage.setAttribute("class", "product-image");
+    const productImageNode = document.createElement("img");
+    productImageNode.setAttribute("src", "../assets/images/gau.jpg");
+    productImageNode.setAttribute("alt", "Gấu trúc");
+    productImage.appendChild(productImageNode);
+    newDiv.appendChild(productImage);
+
+    
+    const productTitle = document.createElement("h3");
+    productTitle.setAttribute("class", "product-title");
+    productTitle.textContent = "Gấu trúc";
+    newDiv.appendChild(productTitle);
+
+
+    const productPrice = document.createElement("p");
+    productPrice.setAttribute("class", "product-price");
+    productPrice.textContent = "Giá: 5.000.000.000 VND";
+    newDiv.appendChild(productPrice);
+
+   
+    const productDetails = document.createElement("p");
+    productDetails.setAttribute("class", "product-details");
+    const detailsLink = document.createElement("a");
+    detailsLink.setAttribute("href", "https://laodong.vn/du-lich/tin-tuc/hang-nghin-nguoi-han-quoc-xep-hang-tu-4h-sang-gap-gau-truc-fu-bao-lan-cuoi-1311184.html");
+    detailsLink.setAttribute("target", "_blank");
+    detailsLink.textContent = "Chi tiết sản phẩm";
+    productDetails.appendChild(detailsLink);
+    newDiv.appendChild(productDetails);
+
+    
+    const buyButton = document.createElement("button");
+    buyButton.setAttribute("class", "buy-button");
+    buyButton.textContent = "Mua hàng";
+    buyButton.addEventListener("click", function() {
+      alert("Đã thêm vào giỏ hàng!");
+    });
+    newDiv.appendChild(buyButton);
+
+   
+    const viewDetailsButton = document.createElement("button");
+    viewDetailsButton.setAttribute("class", "view-details-button");
+    viewDetailsButton.textContent = "Xem chi tiết";
+    viewDetailsButton.addEventListener("click", function() {
+      window.open("https://laodong.vn/du-lich/tin-tuc/hang-nghin-nguoi-han-quoc-xep-hang-tu-4h-sang-gap-gau-truc-fu-bao-lan-cuoi-1311184.html", "_blank");
+    });
+    newDiv.appendChild(viewDetailsButton);
+  </script>
+</body>
+</html>
