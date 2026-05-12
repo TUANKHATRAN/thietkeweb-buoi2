@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
+  <div id="product-detail"></div>
+  <script src="../js/lib.js"></script>
+  <script>
+    function showProductDetail() {
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get('id'), 10);
+      const product = productList.find(item => item.id === id);
+      const container = document.getElementById('product-detail');
+      if (!product) {
+        container.innerHTML = '<div class="detail-card"><p>Không tìm thấy sản phẩm. <a href="page6.html">Quay lại trang sản phẩm</a></p></div>';
+        return;
+      }
+
+      const savedNote = localStorage.getItem('product-note-' + product.id) || '';
+
+      container.innerHTML = `
+        <div class="detail-card">
+          <button class="back-button" onclick="window.location.href='page6.html'">← Quay lại danh sách</button>
+          <h1>${product.name}</h1>
+          <div class="product-image" style="text-align:center;">
+            <img src="${product.image}" alt="${product.name}" style="display:block; width:80%; max-width:420px; margin:0 auto; height:auto; object-fit:cover; border-radius:12px;">
+          </div>
+          <p class="price">Giá: ${product.price.toLocaleString()} VND</p>
+          <p class="description">${product.description}</p>
+          <div class="note-block">
+          </div>
+        </div>
+      `;
+
+      const saveButton = document.getElementById('save-note');
+      if (saveButton) {
+        saveButton.addEventListener('click', function() {
+          const note = document.getElementById('product-note').value;
+          localStorage.setItem('product-note-' + product.id, note);
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', showProductDetail);
+  </script>
+</body>
+</html>
